@@ -18,3 +18,9 @@ usage:
   Will apply all the sql files which was never executed.
   
 4. repeat 1 2 3 
+
+
+warning:
+
+This script support multi sql statement in a migration sql file.Be careful to do this because multi sql execution is not a atomic operation.
+It means some query may success and some query may fail, and no database migration version will be logged.
